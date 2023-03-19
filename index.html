@@ -11,23 +11,23 @@
 <body>
     <div class="calculadora">
         <div class="pantalla">
-            <input type="text" id="resultado" value="">
+            <input type="number" id="resultado" value="">
         </div>
         <div id="botnesNum">
         <button id="numeros" onclick="seleccionarNum(1)">1</button>
-        <button id="numeros" >2</button>
-        <button id="numeros">3</button>
-        <button id="numeros">4</button>
-        <button id="numeros">5</button>
-        <button id="numeros">6</button>
-        <button id="numeros">7</button>
-        <button id="numeros">8</button>
-        <button id="numeros">9</button>
-        <button id="numeros">0</button>
-        <button id="operaciones">=</button>
-        <button id="operaciones">+</button>
+        <button id="numeros" onclick="seleccionarNum(2)">2</button>
+        <button id="numeros"onclick="seleccionarNum(3)">3</button>
+        <button id="numeros"onclick="seleccionarNum(4)">4</button>
+        <button id="numeros"onclick="seleccionarNum(5)">5</button>
+        <button id="numeros"onclick="seleccionarNum(6)">6</button>
+        <button id="numeros"onclick="seleccionarNum(7)">7</button>
+        <button id="numeros"onclick="seleccionarNum(8)">8</button>
+        <button id="numeros"onclick="seleccionarNum(9)">9</button>
+        <button id="numeros"onclick="seleccionarNum(0)">0</button>
+        <button id="igual">=</button>
+        <button id="operaciones" id="suma" onclick="sumar();">+</button>
         <button id="operaciones">-</button>
-        <button class="clear">C</button>
+        <button class="clear" onclick="borrar()">C</button>
     </div>
     </div>
 </body>
