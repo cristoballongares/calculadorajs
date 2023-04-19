@@ -8,10 +8,10 @@
     <title>Calculadora | crist138</title>
 </head>
 <script src="app.js"></script>
-<body>
+<body onload="cargar();">
     <div class="calculadora">
         <div class="pantalla">
-            <input type="number" id="resultado" value="">
+            <input type="text" id="resultado" value="">
         </div>
         <div id="botnesNum">
         <button id="numeros" onclick="seleccionarNum(1)">1</button>
@@ -24,9 +24,9 @@
         <button id="numeros"onclick="seleccionarNum(8)">8</button>
         <button id="numeros"onclick="seleccionarNum(9)">9</button>
         <button id="numeros"onclick="seleccionarNum(0)">0</button>
-        <button id="igual">=</button>
-        <button id="operaciones" id="suma" onclick="sumar();">+</button>
-        <button id="operaciones">-</button>
+        <button id="igual" onclick="resolver()">=</button>
+        <button id="suma" onclick="operation(1)">+</button>
+        <button id="resta" onclick="operation(2)">-</button>
         <button class="clear" onclick="borrar()">C</button>
     </div>
     </div>

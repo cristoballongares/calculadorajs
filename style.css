@@ -39,12 +39,12 @@ body{
     display: grid;
     grid-template-columns: repeat(4,1fr );
     grid-gap: 50px;
-    margin: 20px auto auto 20px;
+    margin: 10px 20px auto 10px;
 }
 
 #botnesNum button{
-    width: 45px;
-    height: 45px;
+    width: 55px;
+    height: 55px;
 }
 
 #numeros{

@@ -1,47 +1,54 @@
-var turno = true;
+var num1;
+var operacion;
 
-function seleccionarNum(numero) {
-    var res = document.getElementById("resultado");
-
-    var valorA = resultado.value;
-
-    var valorN = valorA + numero;
-
-    resultado.value = valorN;
-
+function cargar(){
+    res = document.getElementById("resultado");
 }
 
+
+function seleccionarNum(numero) {
+    res.value+=numero
+}
 function borrar(){
-    var res = document.getElementById("resultado");
     res.value = "";
 }
 
-function sumar(){
-    var btnSum = document.getElementById("suma")
-    var resultado = document.getElementById("resultado");
-    var igual = document.getElementById("igual");
+function operation(num){
 
-    if(turno){
-        n1 = parseInt(resultado.value);
-        
-        console.log(n1,turno);
-        turno = false;    
-    } else if(!turno){
-        n2 = parseInt(resultado.value);
+    switch(num){
+        case 1: 
+            num1 = parseFloat(res.value);
+            operacion = 1;
+            borrar();
+            break;
 
-        n1+n2;
-        console.log(n1+n2,turno);
-        igual.onclick(getRes(1,n1,n2));
-        turno = true;
+        case 2:
+            num1 = parseFloat(res.value);
+            operacion = 2;
+            borrar();
+            break; 
+
+        case 2:
+                num1 = parseFloat(res.value);
+                operacion = 2;
+                borrar();
+                break; 
+
     }
 }
 
+function resolver(){
+var num2 = parseFloat(res.value)
+    switch(operacion){
+        case 1: 
+        res.value = num1 + num2;
+        console.log("sumo");
+        break;
 
-function getRes(tipo,n1,n2){
-var resultado = document.getElementById("resultado");
+        case 2: 
+        res.value = num1 - num2;
+        console.log("resta");
+        break;
+    }
 
-    switch(tipo){
-        case 1: resultado.value = parseInt(n1+n2); break; // suma
-        case 2: return n1-n2; break; // resta
-        }
 }
